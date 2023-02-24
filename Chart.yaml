@@ -1,0 +1,23 @@
+annotations:
+  category: Infrastructure
+  licenses: Apache-2.0
+apiVersion: v2
+appVersion: 1.0.0
+dependencies:
+- name: common
+  repository: https://charts.bitnami.com/bitnami
+  tags:
+  - bitnami-common
+  version: 2.x.x
+description: Nginx bitnami/nginx based template
+keywords:
+- nginx
+- http
+- web
+- www
+- reverse proxy
+name: nginx
+sources:
+- https://github.com/bitnami/containers/tree/main/bitnami/nginx
+- https://www.nginx.org
+version: 1.0.0
