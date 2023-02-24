@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-This is a thiner version of bitnami Nginx Helm chart without metrics and other monitoring features.
+This is a light version of bitnami Nginx Helm chart without metrics and other monitoring features.
 We've added the following extra features for example for lab usages:
 
 - Easy htaccess management directly from your `values.yaml`
