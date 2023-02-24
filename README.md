@@ -2,17 +2,21 @@
 
 # NGINX Open Source modified by Jakub Wojtowicz
 
-NGINX Open Source is a web server that can be also used as a reverse proxy, load balancer, and HTTP cache. Recommended for high-demanding sites due to its ability to provide faster content.
-
-[Overview of NGINX Open Source](http://nginx.org)
-
-Trademarks: This software listing is packaged by Bitnami. The respective trademarks mentioned in the offering are owned by the respective companies, and use of them does not imply any affiliation or endorsement.
-
 ## TL;DR
 
+This is a thiner version of bitnami Nginx Helm chart without metrics and other monitoring features.
+We've added the following extra features for example for lab usages:
+
+- Easy htaccess management directly from your `values.yaml`
+- SSL certificate with selfsigned option and/or certificates as variables
+- PersistentVolumeClaim for your data mounted in `/app` path
+
+Simply install it with: 
+
 ```console
-helm repo add my-repo https://charts.bitnami.com/bitnami
-helm install my-release my-repo/nginx
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm dependency build
+helm install nginx-test ./
 ```
 
 ## Introduction
@@ -27,29 +31,6 @@ Bitnami charts can be used with [Kubeapps](https://kubeapps.dev/) for deployment
 
 - Kubernetes 1.19+
 - Helm 3.2.0+
-
-## Installing the Chart
-
-To install the chart with the release name `my-release`:
-
-```console
-helm repo add my-repo https://charts.bitnami.com/bitnami
-helm install my-release my-repo/nginx
-```
-
-These commands deploy NGINX Open Source on the Kubernetes cluster in the default configuration.
-
-> **Tip**: List all releases using `helm list`
-
-## Uninstalling the Chart
-
-To uninstall/delete the `my-release` deployment:
-
-```console
-helm delete my-release
-```
-
-The command removes all the Kubernetes components associated with the chart and deletes the release.
 
 ## Bitnami Kubernetes Documentation
 
